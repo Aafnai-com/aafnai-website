@@ -60,7 +60,6 @@
       .wrap{grid-template-columns: 1fr; padding:20px}
     }
 
-    /* Header / logo */
     .brand {
       display:flex;
       gap:18px;
@@ -77,8 +76,9 @@
       box-shadow: 0 8px 28px rgba(0,0,0,0.45);
       flex:0 0 84px;
     }
-    /* simple SVG mark uses accent + background for brand tie-in */
-    .logo svg { width:48px; height:48px; display:block; }
+    .logo img { width:48px; height:48px; display:block; }
+  
+
 
     h1{
       margin:0 0 6px 0;
@@ -188,13 +188,8 @@
   <main class="wrap" role="main" aria-labelledby="title">
     <section>
       <div class="brand" aria-hidden="false">
-        <div class="logo" aria-hidden="true" title="Your logo">
-          <!-- Logo placeholder: simple mark using brand accent and background -->
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
-            <rect x="4" y="4" width="56" height="56" rx="10" fill="#FFFF00"/>
-            <circle cx="32" cy="28" r="10" fill="#010536"/>
-            <path d="M18 44c4-6 12-10 20-8" stroke="#FBFBF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <div class="logo" aria-hidden="true" title="Aafnai.com logo">
+          <img src="assets/svg/logo-white.svg" alt="Aafnai Ads Logo" style="width:70%;height:auto;">
         </div>
         <div>
           <h1 id="title">We're Building — Coming Soon</h1>
