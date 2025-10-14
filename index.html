@@ -1,103 +1,100 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Site Under Construction</title>
-  <meta name="description" content="We're building something awesome. Coming soon!" />
-  <!-- Favicon placeholder (replace with your URL) -->
-  <link rel="icon" href="favicon.ico" />
+  <title>Site In Progress — Your Brand</title>
+  <meta name="description" content="We're building something — coming soon!" />
+  <!-- Nunito from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    /* Brand color variables (exact values you provided) */
     :root{
-      --bg1: #0f172a;
-      --bg2: #002044;
-      --accent: #ffb86b;
-      --muted: rgba(255,255,255,0.75);
-      --glass: rgba(255,255,255,0.06);
-      --radius: 16px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --brand-primary-hex: #FBFBF8;   /* Primary */
+      --brand-primary-rgb: 251,251,248;
+      --brand-secondary-hex: #FBFBF8; /* Secondary (same) */
+      --brand-accent-hex: #FFFF00;    /* Accent (yellow) */
+      --brand-background-hex: #010536; /* Background (deep navy) */
+
+      --bg: var(--brand-background-hex);
+      --fg: var(--brand-primary-hex);
+      --accent: var(--brand-accent-hex);
+
+      --radius: 12px;
+      --glass: rgba(var(--brand-primary-rgb), 0.06);
+      --muted: rgba(var(--brand-primary-rgb), 0.72);
+      font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      background: linear-gradient(135deg,var(--bg1), var(--bg2));
-      color: #f8fafc;
+      background: linear-gradient(180deg, var(--bg) 0%, #04124a 100%);
+      color: var(--fg);
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:24px;
+      padding:28px;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      line-height:1.35;
+      line-height:1.4;
+      font-size:16px;
     }
 
-    .card{
+    /* Container */
+    .wrap{
       width:100%;
-      max-width:980px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      border-radius: var(--radius);
-      padding:32px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      max-width:1100px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:28px;
+      box-shadow: 0 12px 40px rgba(1,3,20,0.6);
       display:grid;
-      grid-template-columns: 1fr 420px;
+      grid-template-columns: 1fr 380px;
       gap:28px;
       align-items:center;
-      backdrop-filter: blur(6px);
       border: 1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
     }
-
     @media (max-width:900px){
-      .card{grid-template-columns:1fr; padding:20px}
+      .wrap{grid-template-columns: 1fr; padding:20px}
     }
 
-    .left {
-      padding-right:12px;
+    /* Header / logo */
+    .brand {
+      display:flex;
+      gap:18px;
+      align-items:center;
     }
+    .logo {
+      width:84px;
+      height:84px;
+      border-radius:16px;
+      background: linear-gradient(180deg, var(--fg), rgba(251,251,248,0.92));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+      flex:0 0 84px;
+    }
+    /* simple SVG mark uses accent + background for brand tie-in */
+    .logo svg { width:48px; height:48px; display:block; }
 
     h1{
       margin:0 0 6px 0;
-      font-size: clamp(20px, 3.2vw, 34px);
-      letter-spacing:-0.02em;
+      font-size: clamp(20px, 3.2vw, 36px);
+      letter-spacing:-0.01em;
+      color: var(--fg);
+      font-weight:800;
     }
-
     p.lead{
-      margin:6px 0 20px 0;
-      color:var(--muted);
-      max-width:54ch;
+      margin:8px 0 18px 0;
+      color: var(--muted);
+      max-width:60ch;
+      font-weight:600;
     }
 
-    /* Construction SVG container */
-    .illustration{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      margin-bottom:16px;
-    }
-
-    .hardhat{
-      width:84px;
-      height:84px;
-      flex:0 0 84px;
-      border-radius:12px;
-      background: linear-gradient(180deg,#ffd59a 0%, #ffb86b 100%);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-      transform-origin:center;
-      animation: bob 2.8s ease-in-out infinite;
-    }
-    @keyframes bob{
-      0%{transform: translateY(0)}
-      50%{transform: translateY(-6px)}
-      100%{transform: translateY(0)}
-    }
-
-    .progress-wrap{
-      margin-top:8px;
-    }
+    /* progress */
     .progress-bar {
       width:100%;
       background:var(--glass);
@@ -110,30 +107,22 @@
       height:100%;
       width:0%;
       border-radius:999px;
-      background: linear-gradient(90deg, #ffd59a, #ffb86b 60%, #ff8a5b);
+      background: linear-gradient(90deg, var(--accent), #ffdf00 60%);
       display:flex;
       align-items:center;
       justify-content:flex-end;
       padding-right:8px;
-      color: #0b0b0b;
-      font-weight:600;
+      color:#010536; /* dark text on yellow for contrast */
+      font-weight:700;
       font-size:12px;
       transition: width 0.6s cubic-bezier(.2,.9,.2,1);
     }
-    .meta{
-      display:flex;
-      gap:12px;
-      margin-top:14px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-    .meta small{color:var(--muted); font-size:13px}
 
-    /* Right column / card */
-    .right{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    /* Right column */
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
       padding:18px;
-      border-radius:12px;
+      border-radius:14px;
       border: 1px solid rgba(255,255,255,0.02);
     }
     label{display:block; font-size:13px; margin-bottom:8px; color:var(--muted)}
@@ -142,77 +131,144 @@
       padding:12px 14px;
       border-radius:10px;
       border:1px solid rgba(255,255,255,0.04);
-      background: rgba(0,0,0,0.25);
-      color: #fff;
+      background: rgba(1,5,54,0.28);
+      color: var(--fg);
       outline:none;
       font-size:14px;
       margin-bottom:12px;
     }
     .btn {
       display:inline-block;
-      background: linear-gradient(90deg,#ffb86b,#ff8a5b);
+      background: linear-gradient(90deg, var(--accent), #ffea00);
       border: none;
       padding:10px 16px;
       border-radius:10px;
-      color:#081018;
-      font-weight:700;
+      color: #010536;
+      font-weight:800;
       cursor:pointer;
       text-decoration:none;
       font-size:14px;
+      box-shadow: 0 8px 18px rgba(255,255,0,0.06);
     }
-    .socials{display:flex; gap:10px; margin-top:12px}
-    .socials a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:40px;
-      height:40px;
-      border-radius:10px;
-      background: rgba(255,255,255,0.03);
-      text-decoration:none;
-      color:var(--muted);
-      border: 1px solid rgba(255,255,255,0.02);
-    }
+
+    .meta{display:flex; gap:12px; margin-top:12px; align-items:center; flex-wrap:wrap}
+    .meta small{color:var(--muted); font-size:13px}
 
     footer.small {
-      margin-top:18px;
-      font-size:12px;
+      margin-top:16px;
+      font-size:13px;
       color:var(--muted);
     }
 
-    .tagline{
+    .tag{
       display:inline-block;
       padding:6px 10px;
-      background:rgba(0,0,0,0.14);
       border-radius:999px;
-      font-weight:600;
-      font-size:13px;
+      background: rgba(255,255,255,0.02);
+      font-weight:700;
       color:var(--muted);
+      font-size:13px;
       border:1px solid rgba(255,255,255,0.02);
     }
 
-    .note{
-      margin-top:14px;
-      color:var(--muted);
-      font-size:13px;
+    a.ghost {
+      color: var(--fg);
+      text-decoration: underline;
+      text-underline-offset:4px;
+      font-weight:700;
+    }
+
+    /* small responsive tweaks */
+    @media (max-width:420px){
+      .logo{flex:0 0 68px}
     }
   </style>
 </head>
 <body>
-  <main class="card" role="main" aria-labelledby="title">
-    <section class="left" aria-hidden="false">
-      <div class="illustration" role="img" aria-label="Construction icon">
-        <div class="hardhat" title="We're building!">
-          <!-- Simple helmet SVG -->
-          <svg width="44" height="28" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 24C10 18 26 12 32 12C38 12 54 18 62 24V30C54 26 40 22 32 22C24 22 10 26 2 30V24Z" fill="#FFF2E3" opacity="0.9"/>
-            <path d="M10 26C18 22 46 22 54 26" stroke="#FF8A5B" stroke-width="3" stroke-linecap="round"/>
+  <main class="wrap" role="main" aria-labelledby="title">
+    <section>
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true" title="Your logo">
+          <!-- Logo placeholder: simple mark using brand accent and background -->
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+            <rect x="4" y="4" width="56" height="56" rx="10" fill="#FFFF00"/>
+            <circle cx="32" cy="28" r="10" fill="#010536"/>
+            <path d="M18 44c4-6 12-10 20-8" stroke="#FBFBF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div>
-          <h1 id="title">Site Under Construction</h1>
-          <p class="lead">We're putting the final bricks in place. New site launching soon — sign up to get updates and a first look.</p>
+          <h1 id="title">We're Building — Coming Soon</h1>
+          <p class="lead">Thanks for visiting. We're crafting something special using our brand look: Nunito type, deep navy background, warm yellow accent, and a clean white primary tone. Join the list to get first access.</p>
+        </div>
+      </div>
 
-          <div class="progress-wrap" aria-hidden="false">
-            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-              <div
+      <div style="margin-top:18px">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="progressFill" class="progress-fill">0%</div>
+        </div>
+        <div class="meta" style="margin-top:10px">
+          <small>Brand colors — Background: <strong>#010536</strong>, Primary: <strong>#FBFBF8</strong>, Accent: <strong>#FFFF00</strong></small>
+          <div style="flex:1"></div>
+          <span class="tag">Font: Nunito</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="card" aria-label="Subscribe">
+      <form id="subscribeForm" onsubmit="subscribe(event)">
+        <label for="email">Join the waitlist</label>
+        <input id="email" type="email" placeholder="you@yourdomain.com" required />
+        <button class="btn" type="submit">Notify me</button>
+      </form>
+
+      <div style="margin-top:12px; color:var(--muted)">
+        <small>Prefer to email? <a class="ghost" href="mailto:hello@example.com">hello@example.com</a></small>
+      </div>
+
+      <footer class="small" aria-hidden="true">© <span id="year"></span> Your Company — All rights reserved</footer>
+    </aside>
+  </main>
+
+  <script>
+    // Progress animation using your brand accent
+    (function(){
+      const fill = document.getElementById('progressFill');
+      const text = fill;
+      let current = 8;            // starting %
+      const target = 64;         // example target — change as you like
+      const stepInterval = 650;  // ms
+
+      function step(){
+        if(current < target){
+          current += Math.ceil((target - current) * 0.18) || 1;
+          if(current > target) current = target;
+          fill.style.width = current + '%';
+          fill.textContent = current + '%';
+          // update aria
+          const parent = fill.parentElement;
+          if(parent) parent.setAttribute('aria-valuenow', String(current));
+        }
+      }
+      // initial set
+      fill.style.width = current + '%';
+      fill.textContent = current + '%';
+
+      const t = setInterval(()=>{
+        step();
+        if(current >= target) clearInterval(t);
+      }, stepInterval);
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+
+    function subscribe(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email) return alert('Please enter your email address.');
+      const subject = encodeURIComponent('Notify me when site launches');
+      const body = encodeURIComponent('Please add me to the updates list: ' + email);
+      window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
