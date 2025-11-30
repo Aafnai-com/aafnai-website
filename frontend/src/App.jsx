@@ -1,11 +1,23 @@
-import ComingSoon from './pages/coming.jsx';
-import './App.css'
 
-function App() {
+
+import ComingSoon from './pages/coming.jsx';
+
+import './App.css'
+import Masthead from './components/masthead'
+import Footer from './components/footer.jsx';
+
+import { Burger } from '@mantine/core';
+
+
+function App({toggleColorScheme, colorScheme}) {
 
   return (
     <>
-      <ComingSoon />  
+    
+      <Masthead  toggleColorScheme={toggleColorScheme} colorScheme={colorScheme}/>
+       {/* <ComingSoon /> */}
+      <Footer />
+     
     </>
   )
 }
