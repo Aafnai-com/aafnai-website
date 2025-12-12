@@ -2,6 +2,7 @@ const rawnavLinks = [
     {
         'id': 'Services',
         'link': '/services',
+        'dropdownType': 'cards',
         'children': [
             {
                 name: "Marketing",
@@ -36,6 +37,7 @@ const rawnavLinks = [
     {
         'id': 'Resources',
         'link': '/resources',
+        'dropdownType': 'cards',
         'children': [
             { name: "Blog", link: "/blog" },
             { name: "Guides", link: "/guides" },
@@ -47,6 +49,7 @@ const rawnavLinks = [
     {
         'id': 'Aafnai for',
         'link': '/aafnaifor',
+        'dropdownType': 'cards',
         'children': [
             {
                 name: "Individuals",
@@ -69,6 +72,7 @@ const rawnavLinks = [
     {
         'id': 'Company',
         'link': '/company',
+        'dropdownType': 'cards',
         'children': [
             { name: "About Us", link: "/aboutus" },
             { name: "Team", link: "/team" },
@@ -81,17 +85,23 @@ const rawnavLinks = [
     {
         'id': 'Assets',
         'link': '/assets',
+        'dropdownType': 'cards',
         'children': [
             { name: "Influncers", link: "/assets/influencers" },
         ]
+    },
+    {
+        'id': 'Blogs',
+        'link': '/blogs',
+        'dropdownType': null,
     }
 ];
 
 //sorting as per the requirement before it reaches the navbar component
 export const navLinks =
     [
-        rawnavLinks.find(link => link.id === 'Services'),
         rawnavLinks.find(link => link.id === 'Aafnai for'),
+        rawnavLinks.find(link => link.id === 'Services'),
         rawnavLinks.find(link => link.id === 'Resources'),
         rawnavLinks.find(link => link.id === 'Assets'),
         rawnavLinks.find(link => link.id === 'Company'),

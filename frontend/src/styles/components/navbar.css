@@ -19,7 +19,8 @@
 .navbar.top {
     background: rgba(255, 255, 255, 0);
 }
-.navbar.top a {
+.navbar.top a,
+.navbar.top .nav-chevron {
     color: white !important;
 }
 
@@ -27,7 +28,8 @@
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
 }
-.navbar.scrolled a {
+.navbar.scrolled a,
+.navbar.scrolled .nav-chevron {
     color: black !important;
 }
 
@@ -49,13 +51,25 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    
 }
 
 .nav-item {
     font-size: 16px;
     text-decoration: none;
     transition: opacity 0.2s ease;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
+
+.nav-chevron {
+  margin-left: 4px;
+    /* transition: 0.2s ease; */
+}
+
 
 /* Right side actions */
 .navbar-actions-desktop {
@@ -64,7 +78,7 @@
     justify-content: flex-end;
     gap: 1.5rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 1040px) {
 
     .navbar-links {
         display: none;   /* hide full nav links */
