@@ -4,7 +4,7 @@ import Spline from "@splinetool/react-spline";
 export default function LandingPage() {
   return (
     <div>
-       <Spline scene="https://prod.spline.design/BQ9sLbVjOq7rukFH/scene.splinecode" />
+       {/* <Spline scene="https://prod.spline.design/BQ9sLbVjOq7rukFH/scene.splinecode" /> */}
  
       <h1>kfldasjflkasd</h1><Spline
         scene="https://prod.spline.design/cecUaa3u1J0mRd4L/scene.splinecode" 

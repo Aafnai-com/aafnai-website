@@ -105,4 +105,5 @@ export const navLinks =
         rawnavLinks.find(link => link.id === 'Resources'),
         rawnavLinks.find(link => link.id === 'Assets'),
         rawnavLinks.find(link => link.id === 'Company'),
+        rawnavLinks.find(link => link.id === 'Blogs'),
     ];

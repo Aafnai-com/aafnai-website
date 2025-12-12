@@ -31,16 +31,14 @@ export default function Navbar() {
                     <Grid.Col span={6} className="navbar-links">
                         <div className="nav-items">
                             {navLinks.map((item) => (
-                                <NavbarDropdown>
+                                <NavbarDropdown linkName={item.id}>
                                     <div key={item.id} className="nav-item-wrapper">
-                                        <a key={item.id} className="nav-item" href={item.link}>
+                                        <span key={item.id} className="nav-item" >
                                             {item.id}
                                             {item.dropdownType && (<IconChevronCompactDown stroke={1} className="nav-chevron" />)}
-                                        </a>
+                                        </span>
                                     </div>
                                 </NavbarDropdown>
-
-
                             ))}
                         </div>
                     </Grid.Col>
