@@ -18,6 +18,7 @@ function Root() {
     <MantineProvider
       theme={{ colorScheme }}
     >
+      
       <App toggleColorScheme={toggleColorScheme} colorScheme={colorScheme} />
     </MantineProvider>
   );

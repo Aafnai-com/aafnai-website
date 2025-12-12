@@ -18,18 +18,20 @@
 
 *{box-sizing:border-box;}
 
-html,body{height:100%}
+
 
 body{
   margin: 0;
   background: linear-gradient(180deg, var(--bg) 0%, #04124a 100%);
-  color: var(--fg);
+  /* color: var(--fg); */
   
  
-  padding-top: 1%;
+  padding-top: 80px;
   padding-bottom: 0%;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 0%;
+  padding-right: 0%;
+
+
   
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;

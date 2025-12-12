@@ -5,17 +5,20 @@ import ComingSoon from './pages/coming.jsx';
 import './App.css'
 import Masthead from './components/masthead'
 import Footer from './components/footer.jsx';
+import LandingPage from './pages/landingpage.jsx';
+import Navbar from './components/navbar.jsx';
 
-import { Burger } from '@mantine/core';
 
 
-function App({toggleColorScheme, colorScheme}) {
+function App() {
 
   return (
     <>
-    
-      <Masthead  toggleColorScheme={toggleColorScheme} colorScheme={colorScheme}/>
+    <Navbar />
+      {/* <Masthead  toggleColorScheme={toggleColorScheme} colorScheme={colorScheme}/> */}
        {/* <ComingSoon /> */}
+       <LandingPage />
+       
       <Footer />
      
     </>
