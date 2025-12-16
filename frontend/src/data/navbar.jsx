@@ -54,6 +54,7 @@ const rawnavLinks = [
             {
                 name: "Individuals",
                 link: "/aafnaifor/individuals",
+                description : "Personalized solutions for individuals",
                 'children': [
                     { name: "Digital Marketer", link: "/aafnaifor/individuals/digitalmarketers" },
                     { name: "Student", link: "/aafnaifor/individuals/student" },
@@ -62,6 +63,7 @@ const rawnavLinks = [
             {
                 name: "Businesses",
                 link: "/aafnaifor/businesses",
+                description : "Tailored services for businesses",
                 'children': [
                     { name: "Small Businesses", link: "/aafnaifor/businesses/smallbusinesses" },
                     { name: "Enterprises", link: "/aafnaifor/businesses/enterprises" },
