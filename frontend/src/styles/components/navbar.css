@@ -92,7 +92,7 @@
 
   background: linear-gradient(180deg,
       rgba(255, 255, 255, 0.95),
-      rgba(248, 249, 250, 0.95));
+      rgba(245, 249, 250, 0.95));
   user-select: none;
 
  
@@ -100,29 +100,32 @@
 
 /* Card wrapper */
 .navbar-dropdown-card-simple {
-  height: 100%;
-
-  padding: 16px 18px;
-  border-radius: 6px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+  padding: 18px 20px;
+  border-radius: 8px; /* softer corners */
+  background: #FBFBF8; /* Aafnai primary background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* subtle shadow */
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease,
+    background 0.5s ease;
   cursor: pointer;
-  margin-bottom: 2px;
+  margin-bottom: 8px; 
   user-select: none;
+  
 }
 
-/* Hover effect */
 .navbar-dropdown-card-simple:hover {
-  background: rgba(37, 99, 235, 0.06);
-  /* soft blue tint */
-  box-shadow:
-    0 6px 16px rgba(37, 99, 235, 0.08);
-  border-color: rgba(37, 99, 235, 0.18);
+  background: #f7f7f5; 
+  border-color: rgba(0, 0, 0, 0.15);
 }
+
+
+
 
 /*  Active effect */
 .navbar-dropdown-card-simple:active {
@@ -130,7 +133,7 @@
   box-shadow:
     0 3px 8px rgba(37, 99, 235, 0.12);
   border-color: rgba(37, 99, 235, 0.28);
-  transform: scale(0.995);
+  transform: scale(0.950);
 }
 
 /* .navbar-dropdown-card-simple:focus-visible {

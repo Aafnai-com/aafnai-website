@@ -1,5 +1,5 @@
 import { Popover, Text, Grid, Box, Stack } from "@mantine/core";
-import { IconBuilding, IconCloud, IconBadgeAd, IconUsers, IconShare, IconMessageCircle, IconUserCog } from "@tabler/icons-react";
+import { IconBuilding, IconCloud, IconBadgeAd, IconUsers, IconShare, IconMessageCircle, IconUserCog, IconBuildings } from "@tabler/icons-react";
 import { Link } from 'react-router-dom';
 
 export default function NavbarDropdown({ children, linkName, dropdownData }) {
@@ -19,20 +19,24 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
       contentToShow = (
         <Grid.Col className="navbar-dropdown-cards-container-col-simple" span={12} gap="md" >
           <Grid gutter={"md"} >
-            {dropdownData.children.map((item, index) => (
-              <Grid.Col span={12} key={index} className="navbar-dropdown-card-simple" >
-
-                <div className="navbar-dropdown-card-simple-name">
-                  {item?.name}
-                </div>
-                <div className="navbar-dropdown-card-simple-description">
-                  {item?.description}
-                </div>
-              </Grid.Col>
-            ))}
             <Text size="sm">
-              Why choose Aafnai ?
+              How Aafnai Benefits You
             </Text>
+            {dropdownData.children.map((item, index) => (
+
+              <Grid.Col span={12} key={index} className="navbar-dropdown-card-simple" >
+                <Link to={item.link} className="reactouter-link" key={index} >
+                  <div className="navbar-dropdown-card-simple-name">
+                    {item?.name}
+                  </div>
+                  <div className="navbar-dropdown-card-simple-description">
+                    {item?.description}
+                  </div>
+                </Link>
+              </Grid.Col>
+
+            ))}
+
           </Grid>
         </Grid.Col>
       );
@@ -46,7 +50,7 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
           <Link to={dropdownData.link} className="reactouter-link" >
             <div className="service-main-item">
               <div className="service-main-item-logo">
-                <IconCloud stroke={2} />
+                <IconBuildings stroke={2} />
               </div>
               <div className="tree-item-texts">
                 <h4>{dropdownData.title}</h4>
@@ -110,6 +114,55 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
       );
       break;
 
+    case "resources":
+      dropdownWidth = 500;
+      contentToShow = (
+        <Grid.Col className="navbar-dropdown-cards-container-col-simple" span={12}  >
+          <Grid gutter={"lg"} >
+            {dropdownData.children.map((item, index) => (
+              <Grid.Col span={6} key={index} className="navbar-dropdown-card-simple" >
+                <Link to={item.link} className="reactouter-link" key={index} >
+                  <div className="navbar-dropdown-card-simple-name">
+                    {item?.name}
+                  </div>
+                  <div className="navbar-dropdown-card-simple-description">
+                    {item?.description}
+                  </div>
+                </Link>
+              </Grid.Col>
+            ))}
+          </Grid>
+        </Grid.Col>
+      );
+      break;
+    
+    case "company":
+      dropdownWidth = 450;
+      contentToShow = (
+        <Grid.Col className="navbar-dropdown-cards-container-col-simple" span={12} >
+          <Grid gutter={"md"} >
+            {dropdownData.children.map((item, index) => (
+              <Grid.Col span={6} key={index} className="navbar-dropdown-card-simple" >
+                <Link to={item.link} className="reactouter-link" key={index} >
+                  <div className="navbar-dropdown-card-simple-name">  
+                    {item?.name}
+                  </div>
+                  <div className="navbar-dropdown-card-simple-description">
+                    {item?.description}
+                  </div>
+                </Link>
+              </Grid.Col>
+            ))}
+          </Grid>
+        </Grid.Col>
+      );
+      break;
+
+    case "blogs":
+      dropdownWidth = 0;
+      contentToShow = null
+      break;
+
     default:
       dropdownWidth = 300;
       contentToShow = (
@@ -117,6 +170,14 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
           <Text size="sm">No content available</Text>
         </ Grid.Col>
       );
+  }
+
+  if (!contentToShow) {
+    return (
+      <Link to={dropdownData.link} className="reactouter-link">
+        {children}
+      </Link>
+    );
   }
 
   return (

@@ -3,13 +3,13 @@ const rawnavLinks = [
         'id': 'Services',
         'link': '/services',
         'dropdownType': 'cards',
-        title : 'Aafnai Services',
-        'description': 'Explore our wide range of services designed to boost your online presence and drive business growth.',
+        title: 'Aafnai Services',
+        'description': 'Explore how Aafnai helps you in your journey to make your business grow online',
         'children': [
             {
                 name: "Web Development",
                 link: "/services/webdevelopment",
-                description: "Build a website that sets the foundation of your online activity.",
+                description: "Build a website that sets the foundation of your online activity",
                 children: [
                     { name: "Design", link: "/services/webdevelopment/design" },
                     { name: "Development", link: "/services/webdevelopment/development" },
@@ -19,7 +19,7 @@ const rawnavLinks = [
             {
                 name: "Brand awareness via Social Media",
                 link: "/services/socialmedia",
-                description: "Grow your brand's presence, engage and attract your audience on social media platforms.",
+                description: "Grow your brand's presence, engage and attract your audience on social media platforms",
                 children: [
                     { name: "SEO", link: "/services/service1/seo" },
                     {
@@ -39,7 +39,7 @@ const rawnavLinks = [
             {
                 name: "Active Advertisements",
                 link: "/services/activeads",
-                description: "Creating and managing effective ad campaigns across various platforms to reach your target audience.",
+                description: "Creating and managing effective ad campaigns across various platforms to reach your target audience",
                 children: [
                     {
                         name: "Google Search Ads",
@@ -64,7 +64,7 @@ const rawnavLinks = [
 
                     },
                     {
-                        name: "Content Marketing",  
+                        name: "Content Marketing",
                         link: "/services/activeads/contentmarketing",
                     },
                     {
@@ -76,7 +76,7 @@ const rawnavLinks = [
             {
                 name: "Customer Management",
                 link: "/services/customermanagement",
-                description: "Effectively manage all your leads in one place and convert them into loyal customers.",
+                description: "Effectively manage all your leads in one place and convert them into loyal customers",
             }
 
         ]
@@ -86,11 +86,11 @@ const rawnavLinks = [
         'link': '/resources',
         'dropdownType': 'cards',
         'children': [
-            { name: "Blog", link: "/blog" },
-            { name: "Guides", link: "/guides" },
-            { name: "Features", link: "/features" },
-            { name: "Products", link: "/products" },
-            { name: "Support", link: "/support" },
+            { name: "Blogs", link: "/blogs", description: "Latest updates and insights from Aafnai Ads" },
+            { name: "Guides", link: "/guides", description: "Comprehensive guides to help you navigate digital marketing" },
+            { name: "Features", link: "/features", description: "Explore the features of Aafnai Ads platform" },
+            { name: "Products", link: "/products", description: "Discover our range of products designed for your marketing needs" },
+            { name: "Support", link: "/support", description: "Get help and support for using Aafnai Ads" },
         ]
     },
     {
@@ -99,23 +99,24 @@ const rawnavLinks = [
         'dropdownType': 'cards',
         'children': [
             {
-                name: "Individuals",
-                link: "/aafnaifor/individuals",
-                description: "Personalized solutions for individuals",
-                'children': [
-                    { name: "Digital Marketer", link: "/aafnaifor/individuals/digitalmarketers" },
-                    { name: "Student", link: "/aafnaifor/individuals/student" },
-                ]
-            },
-            {
                 name: "Businesses",
                 link: "/aafnaifor/businesses",
-                description: "Tailored services for businesses",
+                description: "Tailored solutions for businesses",
                 'children': [
                     { name: "Small Businesses", link: "/aafnaifor/businesses/smallbusinesses" },
                     { name: "Enterprises", link: "/aafnaifor/businesses/enterprises" },
                 ]
             },
+            {
+                name: "Individuals",
+                link: "/aafnaifor/individuals",
+                description: "Solutions for individuals",
+                'children': [
+                    { name: "Digital Marketer", link: "/aafnaifor/individuals/digitalmarketers" },
+                    { name: "Student", link: "/aafnaifor/individuals/student" },
+                ]
+            },
+
         ]
     },
     {
@@ -123,27 +124,21 @@ const rawnavLinks = [
         'link': '/company',
         'dropdownType': 'cards',
         'children': [
-            { name: "About Us", link: "/aboutus" },
-            { name: "Team", link: "/team" },
-            { name: "Partners", link: "/partners" },
-            { name: "Well Wishers", link: "/wellwishers" }, //supposed to include 'Investors', contributors etc.
-            { name: "Careers", link: "/careers" },
-            { name: "Platforms", link: "/platforms" },
+            { name: "About Us", link: "/aboutus", description: "The story of Aafnai" },
+            { name: "Team", link: "/team", description: "Meet our team" },
+            { name: "Partners", link: "/partners", description: "Our partner compnies that helo us grow" },
+            { name: "Well Wishers", link: "/wellwishers", description: "Our well wishers, Investors and supporters" }, //supposed to include 'Investors', contributors etc.
+            { name: "Careers", link: "/careers", description: "Join our team" },
+            { name: "Platforms", link: "/platforms", description: "Explore the platforms our team lives in" },
+
         ]
     },
     {
-        'id': 'Assets',
-        'link': '/assets',
-        'dropdownType': 'cards',
-        'children': [
-            { name: "Influncers", link: "/assets/influencers" },
-        ]
-    },
-    {
-        'id': 'Blogs',
-        'link': '/blogs',
+        id: 'Blogs',
+        link: '/blogs',
         'dropdownType': null,
     }
+
 ];
 
 //sorting as per the requirement before it reaches the navbar component
@@ -153,7 +148,6 @@ export const navLinks =
         rawnavLinks.find(link => link.id === 'Aafnai for'),
         rawnavLinks.find(link => link.id === 'Services'),
         rawnavLinks.find(link => link.id === 'Resources'),
-        rawnavLinks.find(link => link.id === 'Assets'),
-        rawnavLinks.find(link => link.id === 'Company'),
         rawnavLinks.find(link => link.id === 'Blogs'),
+        rawnavLinks.find(link => link.id === 'Company'),
     ];
