@@ -1,107 +1,107 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    z-index: 999;
-    transition: background 0.3s ease, backdrop-filter 0.4s ease;
-    display: flex;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  transition: background 0.3s ease, backdrop-filter 0.4s ease;
+  display: flex;
+  align-items: center;
+
+ 
 }
 
 .navbar-container {
-    max-width: 1280px;
-    width: 100%;
-    margin: auto;
-    padding: 0 20px;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .navbar.top {
-    background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
 }
 
 .navbar.top span,
 .navbar.top .nav-chevron {
-    color: white !important;
+  color: white !important;
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
 }
 
 .navbar.scrolled span,
 .navbar.scrolled .nav-chevron {
-    color: black !important;
+  color: black !important;
 }
 
 /* Logo */
 .navbar-logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50px;
 }
+
 
 
 .navbar-links {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-items {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 
 
 }
 
 .nav-item {
-    font-size: 16px;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-    cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .nav-chevron {
-    margin-left: 4px;
-    transition: 0.2s ease;
+  margin-left: 4px;
+  transition: 0.2s ease;
 }
 
 .nav-item:hover .nav-chevron {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
-
 
 
 /* Container column */
 .navbar-dropdown-cards-container-col-simple {
   padding: 20px 24px;
-  
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(248, 249, 250, 0.95)
-  );
-  user-select: none;
-  
 
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(248, 249, 250, 0.95));
+  user-select: none;
+
+ 
 }
 
 /* Card wrapper */
 .navbar-dropdown-card-simple {
   height: 100%;
-  
+
   padding: 16px 18px;
   border-radius: 6px;
   background: #ffffff;
@@ -117,7 +117,8 @@
 
 /* Hover effect */
 .navbar-dropdown-card-simple:hover {
-  background: rgba(37, 99, 235, 0.06); /* soft blue tint */
+  background: rgba(37, 99, 235, 0.06);
+  /* soft blue tint */
   box-shadow:
     0 6px 16px rgba(37, 99, 235, 0.08);
   border-color: rgba(37, 99, 235, 0.18);
@@ -136,42 +137,151 @@
   outline: none;
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.35);
 } */
- 
+.reactouter-link {
+  text-decoration: none !important;
+  color: inherit;
+  display: block;
+}
+
+
+.service-main-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background-color: #FBFBF8; /* primary background */
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  margin-left: 0;
+
+ text-decoration: none;
+}
+
+.service-main-item-logo {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #F3F4F6; /* subtle light background for icon */
+  color: #010536; /* icon dark */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+.service-main-item:hover .service-main-item-logo {
+  background-color: #FFFF00; /* accent yellow icon */
+  color: #010536; /* icon dark */
+}
+
+
+
 .tree {
   position: relative;
-  padding-left: 32px;
+  padding-left: 40px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .tree::before {
   content: "";
   position: absolute;
-  left: 10px;
+  left: 32px;
   top: 0;
-  bottom: 56px;
+  bottom: 53px;
   width: 1px;
-  background: #D1D5DB; /* vertical line */
+  background: #D1D5DB;
+  /* vertical line */
 }
 
 .tree-item {
   position: relative;
   padding-left: 24px;
   margin-bottom: 24px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 /* horizontal branch */
 .tree-item::before {
   content: "";
   position: absolute;
-  left: -21px;
-  top: 14px; /* aligns with title */
+  left: -8px;
+  top: 14px;
+  /* aligns with title */
   width: 25px;
   height: 1px;
-  background: #D1D5DB; /* horizontal line */
-}
-.tree-item:hover::before {
   background: #D1D5DB;
-  width: 18px;
+  /* horizontal line */
 }
+
+
+/* keyframes for pulsing width */
+@keyframes pulse-width {
+  0%, 100% {
+    width: 25px;
+  }
+  50% {
+    width: 18px;
+  }
+}
+
+.tree-item:hover::before {
+  animation: pulse-width 0.8s infinite; /* adjust speed as needed */
+}
+
+.tree-item-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  flex-shrink: 0;
+  background: #F3F4F6;
+
+  color: #010536; /* dark for icon */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tree-item-texts h4 {
+  
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #010536;
+
+  transition: color 0.2s ease, background-color 0.2s ease;
+
+  
+}
+
+.tree-item-texts p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6f747e;
+  /* better than default gray */
+
+
+ 
+}
+
+/* Hover effect */
+.tree-item:hover .tree-item-logo {
+  background-color: #FFFF00; /* yellow */
+  color: #010536; /* icon color */
+}
+
+
+
 
 
 
@@ -202,27 +312,27 @@
 
 
 .navbar-actions-desktop {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
 }
 
 @media (max-width: 1087px) {
 
-    .navbar-links {
-        display: none;
-        /* hide full nav links */
-    }
+  .navbar-links {
+    display: none;
+    /* hide full nav links */
+  }
 
-    .navbar-actions-desktop {
-        display: none;
-        /* hide desktop actions */
-    }
+  .navbar-actions-desktop {
+    display: none;
+    /* hide desktop actions */
+  }
 
 
-    .navbar {
-        padding-left: 5%;
-        /* smaller padding */
-    }
+  .navbar {
+    padding-left: 5%;
+    /* smaller padding */
+  }
 }
