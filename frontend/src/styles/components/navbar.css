@@ -93,7 +93,7 @@
     rgba(255, 255, 255, 0.95),
     rgba(248, 249, 250, 0.95)
   );
-  /* border-radius: 2px; */
+  user-select: none;
   
 
 }
@@ -112,6 +112,7 @@
     border-color 0.25s ease;
   cursor: pointer;
   margin-bottom: 2px;
+  user-select: none;
 }
 
 /* Hover effect */
@@ -121,6 +122,57 @@
     0 6px 16px rgba(37, 99, 235, 0.08);
   border-color: rgba(37, 99, 235, 0.18);
 }
+
+/*  Active effect */
+.navbar-dropdown-card-simple:active {
+  background: rgba(37, 99, 235, 0.1);
+  box-shadow:
+    0 3px 8px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.28);
+  transform: scale(0.995);
+}
+
+/* .navbar-dropdown-card-simple:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.35);
+} */
+ 
+.tree {
+  position: relative;
+  padding-left: 32px;
+}
+
+.tree::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 56px;
+  width: 1px;
+  background: #D1D5DB; /* vertical line */
+}
+
+.tree-item {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+/* horizontal branch */
+.tree-item::before {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 14px; /* aligns with title */
+  width: 25px;
+  height: 1px;
+  background: #D1D5DB; /* horizontal line */
+}
+.tree-item:hover::before {
+  background: #D1D5DB;
+  width: 18px;
+}
+
 
 
 

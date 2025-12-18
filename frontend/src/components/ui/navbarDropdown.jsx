@@ -1,4 +1,6 @@
-import { Popover, Text, Grid } from "@mantine/core";
+import { Popover, Text, Grid, Box, Stack } from "@mantine/core";
+import { IconBuilding, IconCloud, IconBadgeAd, IconUsers , IconShare , IconMessageCircle, IconUsersCog } from "@tabler/icons-react";
+
 
 export default function NavbarDropdown({ children, linkName, dropdownData }) {
   const normalizedLinkName = linkName
@@ -38,16 +40,42 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
 
     case "services":
       dropdownWidth = 400;
-      let a = show();
+      let a = show(dropdownData.children);
       contentToShow = (
         <Grid.Col span={12}>
-          <Text size="sm">Our Services:</Text>
-          <ul>
-            <li>Marketing</li>
-            <li>SEO</li>
-            <li>Ads Management</li>
-          </ul>
-          <Text size="sm">See all services</Text>
+          <div className="">
+            <Text size="sm">{dropdownData.title}</Text>
+            <Text size="sm">{dropdownData.description}</Text>
+
+            <p>Efficiently manage deal flow</p>
+          </div>
+          <div className="tree">
+            <div className="tree-item">
+              <IconCloud stroke={2} />
+              <h4>{dropdownData.children[0]?.name}</h4>
+              <p>{dropdownData.children[0]?.description}</p>
+            </div>
+
+            <div className="tree-item">
+              <IconUsers   stroke={2} />
+              <h4>{dropdownData.children[1]?.name}</h4>
+              <p>{dropdownData.children[1]?.description}</p>
+            </div>
+
+            <div className="tree-item">
+              <IconBadgeAd stroke={2} />
+              <h4>{dropdownData.children[2]?.name}</h4>
+              <p>{dropdownData.children[2]?.description}</p>
+            </div>
+
+             <div className="tree-item">
+              <IconUsersCog stroke={2} />
+              <h4>{dropdownData.children[3]?.name}</h4>
+              <p>{dropdownData.children[3]?.description}</p>
+            </div>
+
+          </div>
+
         </Grid.Col>
       );
       break;

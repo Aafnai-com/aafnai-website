@@ -3,10 +3,23 @@ const rawnavLinks = [
         'id': 'Services',
         'link': '/services',
         'dropdownType': 'cards',
+        title : 'Aafnai Services',
+        'description': 'Explore our wide range of services designed to boost your online presence and drive business growth.',
         'children': [
             {
-                name: "Marketing",
-                link: "/services/merketing",
+                name: "Web Development",
+                link: "/services/webdevelopment",
+                description: "Build a website that sets the foundation of your online activity.",
+                children: [
+                    { name: "Design", link: "/services/webdevelopment/design" },
+                    { name: "Development", link: "/services/webdevelopment/development" },
+
+                ]
+            },
+            {
+                name: "Brand awareness via Social Media",
+                link: "/services/socialmedia",
+                description: "Grow your brand's presence, engage and attract your audience on social media platforms.",
                 children: [
                     { name: "SEO", link: "/services/service1/seo" },
                     {
@@ -18,20 +31,54 @@ const rawnavLinks = [
                         ]
                     },
                     {
-                        name: "Inflluencer Marketing",
+                        name: "Influencer Marketing",
                         link: "/services/service1/influencermarketing",
                     }
                 ]
             },
             {
-                name: "Web Development",
-                link: "/services/webdevelopment",
+                name: "Active Advertisements",
+                link: "/services/activeads",
+                description: "Creating and managing effective ad campaigns across various platforms to reach your target audience.",
                 children: [
-                    { name: "Design", link: "/services/webdevelopment/design" },
-                    { name: "Development", link: "/services/webdevelopment/development" },
+                    {
+                        name: "Google Search Ads",
+                        link: "/services/activeads/googleads",
+                    },
+                    {
+                        name: "Facebook Ads",
+                        link: "/services/activeads/facebookads",
 
+                    },
+                    {
+                        name: "Instagram Ads",
+                        link: "/services/activeads/instagramads",
+                    },
+                    {
+                        name: "YouTube Ads",
+                        link: "/services/activeads/youtubeads",
+                    },
+                    {
+                        name: "SEO",
+                        link: "/services/activeads/seo",
+
+                    },
+                    {
+                        name: "Content Marketing",  
+                        link: "/services/activeads/contentmarketing",
+                    },
+                    {
+                        name: "Email Marketing",
+                        link: "/services/activeads/emailmarketing",
+                    }
                 ]
             },
+            {
+                name: "Customer Management",
+                link: "/services/customermanagement",
+                description: "Effectively manage all your leads in one place and convert them into loyal customers.",
+            }
+
         ]
     },
     {
@@ -54,7 +101,7 @@ const rawnavLinks = [
             {
                 name: "Individuals",
                 link: "/aafnaifor/individuals",
-                description : "Personalized solutions for individuals",
+                description: "Personalized solutions for individuals",
                 'children': [
                     { name: "Digital Marketer", link: "/aafnaifor/individuals/digitalmarketers" },
                     { name: "Student", link: "/aafnaifor/individuals/student" },
@@ -63,7 +110,7 @@ const rawnavLinks = [
             {
                 name: "Businesses",
                 link: "/aafnaifor/businesses",
-                description : "Tailored services for businesses",
+                description: "Tailored services for businesses",
                 'children': [
                     { name: "Small Businesses", link: "/aafnaifor/businesses/smallbusinesses" },
                     { name: "Enterprises", link: "/aafnaifor/businesses/enterprises" },
@@ -100,6 +147,7 @@ const rawnavLinks = [
 ];
 
 //sorting as per the requirement before it reaches the navbar component
+//this is the order of appearance of links  in the navbar
 export const navLinks =
     [
         rawnavLinks.find(link => link.id === 'Aafnai for'),
