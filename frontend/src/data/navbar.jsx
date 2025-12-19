@@ -124,13 +124,12 @@ const rawnavLinks = [
         'link': '/company',
         'dropdownType': 'cards',
         'children': [
-            { name: "About Us", link: "/aboutus", description: "The story of Aafnai" },
-            { name: "Team", link: "/team", description: "Meet our team" },
-            { name: "Partners", link: "/partners", description: "Our partner compnies that helo us grow" },
-            { name: "Well Wishers", link: "/wellwishers", description: "Our well wishers, Investors and supporters" }, //supposed to include 'Investors', contributors etc.
-            { name: "Careers", link: "/careers", description: "Join our team" },
-            { name: "Platforms", link: "/platforms", description: "Explore the platforms our team lives in" },
-
+            { name: "About Us", link: "/company/aboutus", description: "The story of Aafnai from the start" },
+            { name: "Team", link: "/company/team", description: "Meet our team, Learn what they do" },
+            { name: "Well Wishers", link: "/company/wellwishers", description: "Our well wishers, Investors and supporters" }, //supposed to include 'Investors', contributors etc.
+            { name: "Careers", link: "/company/careers", description: "Join our team, maybe you will like it" },
+            { name: "Platforms", link: "/company/platforms", description: "Explore the platforms our team lives in" },
+            { name: "Contact Us", link: "/company/contact", description: "Get in touch with us" },
         ]
     },
     {

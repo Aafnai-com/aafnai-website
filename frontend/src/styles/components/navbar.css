@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
 
- 
+
 }
 
 .navbar-container {
@@ -95,7 +95,7 @@
       rgba(245, 249, 250, 0.95));
   user-select: none;
 
- 
+
 }
 
 /* Card wrapper */
@@ -105,22 +105,25 @@
   justify-content: space-between;
   height: 80px;
   padding: 18px 20px;
-  border-radius: 8px; /* softer corners */
-  background: #FBFBF8; /* Aafnai primary background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* subtle shadow */
+  border-radius: 8px;
+  /* softer corners */
+  background: #FBFBF8;
+  /* Aafnai primary background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* subtle shadow */
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease,
     background 0.5s ease;
   cursor: pointer;
-  margin-bottom: 8px; 
+  margin-bottom: 8px;
   user-select: none;
-  
+
 }
 
 .navbar-dropdown-card-simple:hover {
-  background: #f7f7f5; 
+  background: #f7f7f5;
   border-color: rgba(0, 0, 0, 0.15);
 }
 
@@ -153,13 +156,14 @@
   gap: 12px;
   padding: 14px 16px;
   border-radius: 12px;
-  background-color: #FBFBF8; /* primary background */
+  background-color: #FBFBF8;
+  /* primary background */
   cursor: pointer;
   position: relative;
   transition: all 0.2s ease;
   margin-left: 0;
 
- text-decoration: none;
+  text-decoration: none;
 }
 
 .service-main-item-logo {
@@ -169,15 +173,19 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: #F3F4F6; /* subtle light background for icon */
-  color: #010536; /* icon dark */
+  background-color: #F3F4F6;
+  /* subtle light background for icon */
+  color: #010536;
+  /* icon dark */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 
 .service-main-item:hover .service-main-item-logo {
-  background-color: #FFFF00; /* accent yellow icon */
-  color: #010536; /* icon dark */
+  background-color: #FFFF00;
+  /* accent yellow icon */
+  color: #010536;
+  /* icon dark */
 }
 
 
@@ -226,16 +234,20 @@
 
 /* keyframes for pulsing width */
 @keyframes pulse-width {
-  0%, 100% {
+
+  0%,
+  100% {
     width: 25px;
   }
+
   50% {
     width: 18px;
   }
 }
 
 .tree-item:hover::before {
-  animation: pulse-width 0.8s infinite; /* adjust speed as needed */
+  animation: pulse-width 0.8s infinite;
+  /* adjust speed as needed */
 }
 
 .tree-item-logo {
@@ -250,12 +262,13 @@
   flex-shrink: 0;
   background: #F3F4F6;
 
-  color: #010536; /* dark for icon */
+  color: #010536;
+  /* dark for icon */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .tree-item-texts h4 {
-  
+
   margin: 0;
   font-size: 16px;
   font-weight: 600;
@@ -263,7 +276,7 @@
 
   transition: color 0.2s ease, background-color 0.2s ease;
 
-  
+
 }
 
 .tree-item-texts p {
@@ -274,13 +287,15 @@
   /* better than default gray */
 
 
- 
+
 }
 
 /* Hover effect */
 .tree-item:hover .tree-item-logo {
-  background-color: #FFFF00; /* yellow */
-  color: #010536; /* icon color */
+  background-color: #FFFF00;
+  /* yellow */
+  color: #010536;
+  /* icon color */
 }
 
 

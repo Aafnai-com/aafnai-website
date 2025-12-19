@@ -1,15 +1,20 @@
 import { Container, Group, Text, Divider, Anchor } from "@mantine/core";
+import "../styles/components/footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer style={{ marginTop: "3rem" }}>
-      <Divider />
+      <div className="footer-divider"></div>
 
       <Container size="lg" py="xl">
         <Group justify="space-between">
-          <Text size="lg" fw={700}>
-            Aafnai Ad Pvt. Ltd.
-          </Text>
+          <Link to="/" className="reactouter-link">
+            <Text size="lg" fw={700} c="gray.1">
+              Aafnai Ad Pvt. Ltd.
+            </Text>
+          </Link>
+
 
           <Group gap="md">
             <Anchor href="/" size="sm" underline="hover">
@@ -25,8 +30,13 @@ export default function Footer() {
         </Group>
 
         <Text size="sm" c="dimmed" mt="md" ta="center">
-          © {new Date().getFullYear()} Aafnai Ad Pvt. Ltd. All rights reserved.
+          © 2021 - {new Date().getFullYear()}
+          <Link to="/" className="footer-link">
+            {". "}Aafnai Ad Pvt. Ltd.
+          </Link>
+          {" "} All rights reserved.
         </Text>
+
       </Container>
     </footer>
   );

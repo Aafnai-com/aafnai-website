@@ -135,7 +135,7 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
         </Grid.Col>
       );
       break;
-    
+
     case "company":
       dropdownWidth = 450;
       contentToShow = (
@@ -144,7 +144,7 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
             {dropdownData.children.map((item, index) => (
               <Grid.Col span={6} key={index} className="navbar-dropdown-card-simple" >
                 <Link to={item.link} className="reactouter-link" key={index} >
-                  <div className="navbar-dropdown-card-simple-name">  
+                  <div className="navbar-dropdown-card-simple-name">
                     {item?.name}
                   </div>
                   <div className="navbar-dropdown-card-simple-description">
@@ -172,6 +172,7 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
       );
   }
 
+  //for links without dropdowns like in 'Blogs'
   if (!contentToShow) {
     return (
       <Link to={dropdownData.link} className="reactouter-link">
