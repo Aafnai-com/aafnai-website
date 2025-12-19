@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import "../styles/components/navbar.css";
 import { navLinks } from "../data/navbar";
-import { Grid, Popover, Text } from "@mantine/core";
+import { Grid, Popover, Text, Button } from "@mantine/core";
 import { IconChevronCompactDown } from "@tabler/icons-react";
 import NavbarDropdown from "./ui/navbarDropdown";
+import { useDisclosure } from '@mantine/hooks';
+import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [opened, setOpened] = useState(false);
+    const [loading, { toggle }] = useDisclosure();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,7 +34,7 @@ export default function Navbar() {
                     <Grid.Col span={6} className="navbar-links">
                         <div className="nav-items">
                             {navLinks.map((item) => (
-                                <NavbarDropdown linkName={item.id} dropdownData = {item}>
+                                <NavbarDropdown linkName={item.id} dropdownData={item}>
                                     <div key={item.id} className="nav-item-wrapper">
                                         <span key={item.id} className="nav-item" >
                                             {item.id}
@@ -44,10 +47,17 @@ export default function Navbar() {
                     </Grid.Col>
 
                     <Grid.Col span={4} className="navbar-actions-desktop" >
-                        <h3>sign up</h3>
-                        <h3>login</h3>
-                    </Grid.Col>
 
+                        <Button
+                            variant="outline"
+                            className="navbar-yellow-btn"
+                            color="rgb(255, 255, 0) "
+                            radius="lg"
+                            leftSection={<IconBrandWhatsapp stroke={2} size={14} />}
+                           
+                        >Contact Us
+                        </Button>;
+                    </Grid.Col>
                 </Grid>
             </div>
         </div>

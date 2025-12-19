@@ -347,6 +347,17 @@
     display: none;
     /* hide desktop actions */
   }
+  .navbar-yellow-btn{
+    color : rgb(255, 255, 0) 
+  }
+ .navbar-yellow-btn span{
+  color: #e90101 !important;
+ }
+ .aafnai-yellow-btn:hover span,
+.aafnai-yellow-btn:active span,
+.aafnai-yellow-btn:disabled span {
+  color: #f80e0e !important;
+}
 
 
   .navbar {
