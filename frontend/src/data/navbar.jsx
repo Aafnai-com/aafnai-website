@@ -74,9 +74,9 @@ const rawnavLinks = [
                 ]
             },
             {
-                name: "Customer Management",
-                link: "/services/customermanagement",
-                description: "Effectively manage all your leads in one place and convert them into loyal customers",
+                name: "Google Maps Setup & Promotions",
+                link: "/services/googlemaps",
+                description: "Enhance your local presence by setting up and promoting your business on Google Maps",
             }
 
         ]
@@ -86,11 +86,12 @@ const rawnavLinks = [
         'link': '/resources',
         'dropdownType': 'cards',
         'children': [
-            { name: "Blogs", link: "/blogs", description: "Latest updates and insights from Aafnai Ads" },
-            { name: "Guides", link: "/guides", description: "Comprehensive guides to help you navigate digital marketing" },
-            { name: "Features", link: "/features", description: "Explore the features of Aafnai Ads platform" },
-            { name: "Products", link: "/products", description: "Discover our range of products designed for your marketing needs" },
-            { name: "Support", link: "/support", description: "Get help and support for using Aafnai Ads" },
+            { name: "Blogs", link: "/resources/blogs", description: "Latest updates and insights from Aafnai Ads" },
+            { name: "Guides", link: "/resources/guides", description: "Comprehensive guides to help you navigate digital marketing" },
+            { name: "Features", link: "/resources/features", description: "Explore the features of Aafnai Ads platform" },
+            { name: "Products", link: "/resources/products", description: "Discover our range of products designed for your marketing needs" },
+            { name: "Support", link: "/resources/support", description: "Get help and support for using Aafnai Ads" },
+            { name: "FAQ", link: "/resources/faq", description: "Frequently Asked Questions about Aafnai" },
         ]
     },
     {
@@ -101,10 +102,12 @@ const rawnavLinks = [
             {
                 name: "Businesses",
                 link: "/aafnaifor/businesses",
-                description: "Tailored solutions for businesses",
+                description: "Tailored solutions for different businesses",
                 'children': [
-                    { name: "Small Businesses", link: "/aafnaifor/businesses/smallbusinesses" },
-                    { name: "Enterprises", link: "/aafnaifor/businesses/enterprises" },
+                    { name: "Hospitality", link: "/aafnaifor/businesses/hospitality" },
+                    { name: "SMEs", link: "/aafnaifor/businesses/smes" },
+                    { name: "Service Businesses", link: "/aafnaifor/businesses/servicebusinesses" },
+                    { name: "E-commerce", link: "/aafnaifor/businesses/ecommerce" },
                 ]
             },
             {
@@ -134,7 +137,7 @@ const rawnavLinks = [
     },
     {
         id: 'Blogs',
-        link: '/blogs',
+        link: '/resources/blogs',
         'dropdownType': null,
     }
 

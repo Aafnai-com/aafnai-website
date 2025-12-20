@@ -1,5 +1,5 @@
 import { Popover, Text, Grid, Box, Stack } from "@mantine/core";
-import { IconBuilding, IconCloud, IconBadgeAd, IconUsers, IconShare, IconMessageCircle, IconUserCog, IconBuildings } from "@tabler/icons-react";
+import { IconBuilding, IconCloud,IconMapPin, IconBadgeAd, IconUsers, IconBrandGoogleMaps, IconShare, IconMessageCircle, IconUserCog, IconBuildings } from "@tabler/icons-react";
 import { Link } from 'react-router-dom';
 
 export default function NavbarDropdown({ children, linkName, dropdownData }) {
@@ -100,7 +100,7 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
             <Link to={dropdownData.children[3]?.link} className="reactouter-link" >
               <div className="tree-item">
                 <div className="tree-item-logo">
-                  <IconUserCog stroke={2} />
+                  <IconMapPin stroke={2} />
                 </div>
                 <div className="tree-item-texts">
                   <h4>{dropdownData.children[3]?.name}</h4>
@@ -108,6 +108,8 @@ export default function NavbarDropdown({ children, linkName, dropdownData }) {
                 </div>
               </div>
             </Link>
+
+
           </div>
 
         </Grid.Col>
