@@ -18,6 +18,11 @@ import Guides from './pages/resources/guides.jsx';
 import Faq from './pages/resources/faq.jsx';
 import Support from './pages/resources/support.jsx';
 import Products from './pages/resources/products.jsx';
+import CompanyLayout from './pages/company/companyLayout.jsx';
+import Team from './pages/company/team.jsx';
+import Careers from './pages/company/careers.jsx';
+import Platforms from './pages/company/platforms.jsx';
+import ContactUs from './pages/company/contactus.jsx';
 
 
 
@@ -36,7 +41,7 @@ function App() {
         <Route path="/comingsoon" element={<LandingPage />} />
 
         <Route path="/resources" element={< ResourcesLayout />} >
-          <Route index element={< ResourcesLayout />} />
+          <Route index element={< LandingPage />} />
           <Route path='blogs' element={< Blogs />} />
           <Route path='features' element={< Features />} />
           <Route path='guides' element={< Guides />} />
@@ -45,6 +50,13 @@ function App() {
           <Route path='products' element={< Products />} />
         </Route>
 
+        <Route path="/company" element={< CompanyLayout />} >
+          <Route index element={< LandingPage />} />
+          <Route path="/company/team" element={< Team />} />
+          <Route path="/company/careers" element={< Careers />} />
+          <Route path="/company/platforms" element={< Platforms />} />
+          <Route path="/company/contactus" element={< ContactUs />} />
+        </Route>
 
         <Route path="*" element={< NotFound />} />
 
