@@ -23,6 +23,8 @@ import Team from './pages/company/team.jsx';
 import Careers from './pages/company/careers.jsx';
 import Platforms from './pages/company/platforms.jsx';
 import ContactUs from './pages/company/contactus.jsx';
+import AboutUs from './pages/company/aboutus.jsx';
+import WellWishers from './pages/company/wellWishers.jsx';
 
 
 
@@ -52,10 +54,12 @@ function App() {
 
         <Route path="/company" element={< CompanyLayout />} >
           <Route index element={< LandingPage />} />
+          <Route path='aboutus' element={< AboutUs />} />
           <Route path="/company/team" element={< Team />} />
           <Route path="/company/careers" element={< Careers />} />
           <Route path="/company/platforms" element={< Platforms />} />
-          <Route path="/company/contactus" element={< ContactUs />} />
+          <Route path="/company/contact" element={< ContactUs />} />
+          <Route path="/company/wellwishers" element={< WellWishers />} />
         </Route>
 
         <Route path="*" element={< NotFound />} />

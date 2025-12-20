@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import "../styles/components/navbar.css";
 import { navLinks } from "../data/navbar";
-import { Grid, Popover, Text, Button } from "@mantine/core";
+import { Grid, Popover, Text, Button, Stack, Modal } from "@mantine/core";
 import { IconChevronCompactDown } from "@tabler/icons-react";
 import NavbarDropdown from "./ui/navbarDropdown";
 import { useDisclosure } from '@mantine/hooks';
 import { IconBrandWhatsapp } from "@tabler/icons-react";
+import WhatsAppContactButton from "./WhatsAppContactButton";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -48,15 +49,7 @@ export default function Navbar() {
 
                     <Grid.Col span={4} className="navbar-actions-desktop" >
 
-                        <Button
-                            variant="outline"
-                            className="navbar-yellow-btn"
-                            color="rgb(255, 255, 0) "
-                            radius="lg"
-                            leftSection={<IconBrandWhatsapp stroke={2} size={14} />}
-                           
-                        >Contact Us
-                        </Button>;
+                    <WhatsAppContactButton />
                     </Grid.Col>
                 </Grid>
             </div>
