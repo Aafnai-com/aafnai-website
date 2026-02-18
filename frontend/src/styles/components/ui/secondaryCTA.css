@@ -1,0 +1,36 @@
+.secondayCTA {
+ 
+  color: #FBFBF8; /* off-white text */
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondaryCTA-content {
+  max-width: 700px;
+}
+
+.secondaryCTA-content h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.secondaryCTA-content p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+
+
+.secondaryCTA-button:hover {
+  background-color: #FFFF00; /* yellow fill on hover */
+  color: #010536;            /* navy text on hover */
+  border-color: #FFFF00;
+}

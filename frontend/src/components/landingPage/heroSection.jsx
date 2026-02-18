@@ -30,7 +30,7 @@ export default function HeroSection() {
 
             <a href="/services">
               <button className="secondary-btn">
-                Explore Our Services
+                Explore aafnai Services
               </button>
             </a>
           </div>
@@ -53,7 +53,7 @@ export default function HeroSection() {
             </a>
 
             <a href="/#/services" className="services-link">
-              View Our Services →
+              View aafnai Services →
             </a>
           </div>
         </div>

@@ -8,6 +8,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import WhatsAppContactButton from "./WhatsAppContactButton";
 
+
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [opened, setOpened] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar() {
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, []);   
 
     return (
         <div className={scrolled ? "navbar scrolled" : "navbar top"} >
@@ -28,7 +29,7 @@ export default function Navbar() {
 
                     <Grid.Col span={2} className="navbar-logo">
                         <a href="/" >
-                            <img src="/assets/svg/logo-white.svg" alt="Aafnai Ads Logo" />
+                            <img src="../../src/assets/aafnai_black_background.gif"    alt="Aafnai Ads Logo" />
                         </a>
                     </Grid.Col>
 
