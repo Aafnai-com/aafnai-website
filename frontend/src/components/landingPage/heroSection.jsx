@@ -1,4 +1,4 @@
-import { Avatar, Box, Group } from "@mantine/core";
+import { Avatar, Box, Group, Tooltip } from "@mantine/core";
 import "../../styles/components/landingPage/heroSection.css";
 import logo from "../../assets/default.png";
 import clientsLogos from "../../assets/assetsDispenser";
@@ -9,7 +9,7 @@ export default function HeroSection() {
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   console.log(clientsLogos);
   let logos = Object.values(clientsLogos);
-  let scrollingLogos = [...logos, ...logos , ...logos , ...logos , ...logos , ...logos , ...logos , ...logos , ...logos , ...logos];
+  let scrollingLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
   console.log(scrollingLogos);
   return (
     <section className="hero">
@@ -20,7 +20,7 @@ export default function HeroSection() {
           </h1>
 
           <p>
-            We have helped 30+ businesses with 700+ successful ad campaigns. Let us help you reach your ideal customers and grow your business with strategic digital advertising.
+            We have helped 30+ businesses with 700+ successful ad campaigns creating 10,000 + leads. Let us help you reach your ideal customers and grow your business with strategic digital advertising.
           </p>
 
           <div className="hero-buttons">
@@ -62,17 +62,25 @@ export default function HeroSection() {
 
       </div>
       <div className="hero-bottom">
+        <h3 className="hero-bottom-text">Trusted by Leading Businesses</h3>
         <Box className="marquee">
 
           <Box className="marquee-track">
             {Object.entries(scrollingLogos).map(([key, value]) => (
-              <Avatar
-                key={key}
-                src={"../../assets/" + value}
-                size={60}
-                radius="md"
-                className="hero-bottom-brandNames"
-              />
+              <Tooltip label={value.category}
+                withArrow
+                transition="fade"
+                transitionDuration={200}
+              >
+                <Avatar
+                  key={key}
+                  src={"../../assets/" + value.src}
+                  size={60}
+                  radius="md"
+                  className="hero-bottom-brandNames"
+                />
+
+              </Tooltip>
             ))
             }
           </Box>
