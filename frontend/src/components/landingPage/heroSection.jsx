@@ -28,7 +28,7 @@ export default function HeroSection() {
               </button>
             </a>
 
-            <a href="/services">
+            <a href="/#/services">
               <button className="secondary-btn">
                 Explore aafnai Services
               </button>
