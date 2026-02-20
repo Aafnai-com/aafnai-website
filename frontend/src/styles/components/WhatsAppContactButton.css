@@ -1,0 +1,12 @@
+.whatsAppContactButton-popup-dragable-card-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.whatsAppContactButton-popup-dragable-card-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.whatsAppContactButton-popup-dragable-card-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+}

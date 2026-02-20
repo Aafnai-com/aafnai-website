@@ -1,0 +1,201 @@
+.hero {
+  
+  min-height: 90vh;
+  display: flex;
+  /* align-items: center; */
+  padding: 60px 20px;
+  color: white;
+  flex-direction: column;
+}
+
+.hero-content {
+  font-family: 'Nunito', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  background: #ffff00;
+  color: #010536;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #ffff00;
+  color: #ffff00;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mockup-box {
+  background: white;
+  color: #010536;
+  padding: 40px;
+  border-radius: 16px;
+  font-weight: bold;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-card {
+  background: white;
+  color: #010536;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.booking-card h3 {
+  margin-bottom: 15px;
+}
+
+.booking-card p {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.whatsapp-btn {
+  display: block;
+  background: #25D366;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.services-link {
+  color: #010536;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.services-link:hover {
+  transform: scale(1.1);
+  
+}
+
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* padding-top: 40px; */
+  padding-left: 120px;
+  margin-top: 30px;
+
+  text-align: start;
+  overflow: hidden;
+}
+
+.hero-bottom-brandNames {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.hero-bottom-brandNames:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+.hero-bottom-text {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.7;
+  color: #ffffff;
+
+
+}
+
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+
+}
+
+
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Track for animation */
+.marquee-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: marquee 300s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Keyframes for perfect seamless scroll */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move by half width since track is duplicated */
+  }
+}
