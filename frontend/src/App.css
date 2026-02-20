@@ -1,0 +1,58 @@
+
+
+:root{
+  --brand-primary-hex: #FBFBF8;
+  --brand-primary-rgb: 251, 251, 248;
+  --brand-accent-hex: #FFFF00;
+  --brand-background-hex: #010536;
+
+  --bg: var(--brand-background-hex);
+  --fg: var(--brand-primary-hex);
+  --accent: var(--brand-accent-hex);
+
+  --radius: 12px;
+  --glass: rgba(var(--brand-primary-rgb), 0.06);
+  --muted: rgba(var(--brand-primary-rgb), 0.72);
+  font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box;}
+
+
+
+body{
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg) 0%, #04124a 100%);
+  /* color: var(--fg); */
+  
+ 
+  padding-top: 80px;
+  padding-bottom: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+
+
+  
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+  font-size:16px;
+}
+
+/* Container */
+.box{
+  width:100%;
+  max-width:2100px;
+  border: #FFFF00 2px solid;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  
+  border-radius:16px;
+  padding:28px;
+  box-shadow:0 12px 40px rgba(1,3,20,0.6);
+  display:grid;
+  grid-template-columns:1fr 380px;
+  gap:28px;
+  align-items:center;
+  border:1px solid rgba(255,255,255,0.03);
+  backdrop-filter:blur(6px);
+}

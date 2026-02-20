@@ -1,0 +1,72 @@
+.notfound-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #010536; /* Aafnai background */
+  color: #FBFBF8;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.notfound-404 {
+  font-size: 10rem;
+  font-weight: 900;
+  color: #FFFF00;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+
+  animation: float-404-text 3s ease-in-out infinite;
+}
+
+
+.notfound-404:hover {
+  animation-play-state: paused;
+  color: #FBFBF8;
+}
+
+.notfound-text {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  max-width: 400px;
+  line-height: 1.4;
+  color: #FBFBF8;
+}
+
+.notfound-divider {
+  width: 120px;
+  height: 3px;
+  background-color: #FFFF00;
+  margin: 30px 0;
+  border-radius: 5px;
+  animation: grow-404-divider 1s ease-out forwards;
+}
+
+.notfound-button {
+  padding: 12px 30px;
+  border-radius: 12px;
+  background-color: #FFFF00;
+  color: #010536;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notfound-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 255, 0, 0.4);
+}
+
+/* Keyframes */
+@keyframes float-404-text {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes grow-404-divider {
+  0% { width: 0; }
+  100% { width: 120px; }
+}
