@@ -9,14 +9,22 @@ import { Newsletter } from "../components/landingPage/newsletter";
 export default function LandingPage() {
   return (
   <>
-  
+  {/* I see they do what i am looking for */}
     <HeroSection />
+    {/* Clearly they do it for real companies */}
     <PastClientsCarousel />
+    {/* ah. Theire approach looks interesting -- How we do it part...  Video ? Timeline ?*/}
     <Testimonials />
-    <SecondaryCTA />
+    {/* looks like they could help with my specific needs. */}
     <BlogsArticleSection />
-    
+    {/* testimonials - people like them maybe i shold get in touch */}
+    {/* strong supportive visuals */}
+    {/* faces of the team */}
+    {/* data and statiscics */}
+    {/* depth deatail and related phrases */}
+    {/* Final call to action */}
     <Newsletter />
+    <SecondaryCTA />
 
     {/* Need a cost calculator section here or somewhere for the cost of advertising when spen a dollar in fb for certain days. */}
 

@@ -137,7 +137,7 @@
 }
 
 .hero-bottom-brandNames {
-  opacity: 0.6;
+  opacity: 0.5;
   transition: opacity 0.3s ease;
 }
 .hero-bottom-brandNames:hover {
@@ -180,9 +180,9 @@
 /* Track for animation */
 .marquee-track {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: marquee 300s linear infinite;
 }
 
 .marquee-track:hover {

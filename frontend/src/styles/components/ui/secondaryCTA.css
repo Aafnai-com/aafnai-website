@@ -1,6 +1,9 @@
 .secondayCTA {
  
-  color: #FBFBF8; /* off-white text */
+  color: #000000; /* off-white text */
+  background: rgb(171, 201, 226); 
+
+
   padding: 80px 20px;
   text-align: center;
   display: flex;
@@ -10,6 +13,9 @@
 
 .secondaryCTA-content {
   max-width: 700px;
+}
+.secondaryCTA-span {
+  color: #FFFF00; /* yellow text */
 }
 
 .secondaryCTA-content h2 {

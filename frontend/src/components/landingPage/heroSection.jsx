@@ -1,13 +1,16 @@
 import { Avatar, Box, Group } from "@mantine/core";
 import "../../styles/components/landingPage/heroSection.css";
 import logo from "../../assets/default.png";
+import clientsLogos from "../../assets/assetsDispenser";
 
 export default function HeroSection() {
   const phoneNumber = "9779848001067";
   const message = "Hi Aafnai Team, I would like to book a free strategy call.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  const logos = Array(10).fill(logo);
-
+  console.log(clientsLogos);
+  let logos = Object.values(clientsLogos);
+  let scrollingLogos = [...logos, ...logos , ...logos , ...logos , ...logos , ...logos , ...logos , ...logos , ...logos , ...logos];
+  console.log(scrollingLogos);
   return (
     <section className="hero">
       <div className="hero-content">
@@ -17,8 +20,7 @@ export default function HeroSection() {
           </h1>
 
           <p>
-            We help brands scale using data-driven Facebook & Google Ads,
-            conversion-focused websites, and performance marketing strategies.
+            We have helped 30+ businesses with 700+ successful ad campaigns. Let us help you reach your ideal customers and grow your business with strategic digital advertising.
           </p>
 
           <div className="hero-buttons">
@@ -38,9 +40,9 @@ export default function HeroSection() {
 
         <div className="hero-right">
           <div className="booking-card">
-            <h3>Book Your Free Strategy Session</h3>
+            <h2>Order your first Ad.</h2>
             <p>
-              Get a custom growth roadmap for your business. No obligation.
+              Target your ideal customers with precision. Start your business growth.
             </p>
 
             <a
@@ -49,7 +51,7 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="whatsapp-btn"
             >
-              Chat on WhatsApp
+              Order via WhatsApp
             </a>
 
             <a href="/#/services" className="services-link">
@@ -57,22 +59,25 @@ export default function HeroSection() {
             </a>
           </div>
         </div>
+
       </div>
       <div className="hero-bottom">
-       <Box className="marquee">
-        <Box className="marquee-track">
-          {[...logos, ...logos].map((item, index) => (
-            <Avatar
-              key={index}
-              src={item}
-              size={60}
-              radius="md"
-              className="hero-bottom-brandNames"
-            />
-          ))}
+        <Box className="marquee">
+
+          <Box className="marquee-track">
+            {Object.entries(scrollingLogos).map(([key, value]) => (
+              <Avatar
+                key={key}
+                src={"../../assets/" + value}
+                size={60}
+                radius="md"
+                className="hero-bottom-brandNames"
+              />
+            ))
+            }
+          </Box>
         </Box>
-      </Box>
-      
+
       </div>
     </section>
   );
