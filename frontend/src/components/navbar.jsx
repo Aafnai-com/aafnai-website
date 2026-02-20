@@ -20,40 +20,45 @@ export default function Navbar() {
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);   
+    }, []);
 
     return (
-        <div className={scrolled ? "navbar scrolled" : "navbar top"} >
-            <div className="navbar-container">
-                <Grid align="center" style={{ width: "100%" }}>
+        <>
 
-                    <Grid.Col span={2} className="navbar-logo">
-                        <a href="/" >
-                            <img src="../../src/assets/aafnai_black_background.gif"    alt="Aafnai Ads Logo" />
-                        </a>
-                    </Grid.Col>
+            <div className={scrolled ? "navbar scrolled" : "navbar top"} >
 
-                    <Grid.Col span={6} className="navbar-links">
-                        <div className="nav-items">
-                            {navLinks.map((item) => (
-                                <NavbarDropdown linkName={item.id} dropdownData={item}>
-                                    <div key={item.id} className="nav-item-wrapper">
-                                        <span key={item.id} className="nav-item" >
-                                            {item.id}
-                                            {item.dropdownType && (<IconChevronCompactDown stroke={1} className="nav-chevron" />)}
-                                        </span>
-                                    </div>
-                                </NavbarDropdown>
-                            ))}
-                        </div>
-                    </Grid.Col>
+                <div className="navbar-container">
 
-                    <Grid.Col span={4} className="navbar-actions-desktop" >
+                    <Grid align="center" style={{ width: "100%" }}>
 
-                    <WhatsAppContactButton />
-                    </Grid.Col>
-                </Grid>
+                        <Grid.Col span={2} className="navbar-logo">
+                            <a href="/" >
+                                <img src="../../src/assets/aafnai_black_background.gif" alt="Aafnai Ads Logo" />
+                            </a>
+                        </Grid.Col>
+
+                        <Grid.Col span={6} className="navbar-links">
+                            <div className="nav-items">
+                                {navLinks.map((item) => (
+                                    <NavbarDropdown linkName={item.id} dropdownData={item}>
+                                        <div key={item.id} className="nav-item-wrapper">
+                                            <span key={item.id} className="nav-item" >
+                                                {item.id}
+                                                {item.dropdownType && (<IconChevronCompactDown stroke={1} className="nav-chevron" />)}
+                                            </span>
+                                        </div>
+                                    </NavbarDropdown>
+                                ))}
+                            </div>
+                        </Grid.Col>
+
+                        <Grid.Col span={4} className="navbar-actions-desktop" >
+
+                            <WhatsAppContactButton />
+                        </Grid.Col>
+                    </Grid>
+                </div>
             </div>
-        </div>
+        </>
     );
 }

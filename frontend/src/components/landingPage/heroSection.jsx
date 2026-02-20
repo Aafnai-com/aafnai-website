@@ -7,10 +7,8 @@ export default function HeroSection() {
   const phoneNumber = "9779848001067";
   const message = "Hi Aafnai Team, I would like to book a free strategy call.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  console.log(clientsLogos);
   let logos = Object.values(clientsLogos);
   let scrollingLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
-  console.log(scrollingLogos);
   return (
     <section className="hero">
       <div className="hero-content">
