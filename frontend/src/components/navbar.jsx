@@ -33,7 +33,7 @@ export default function Navbar() {
 
                         <Grid.Col span={2} className="navbar-logo">
                             <a href="/" >
-                                <img src="../../public/assets/png/aafnai_black_background.gif" alt="Aafnai Ads Logo" />
+                                <img src="../../assets/png/aafnai_black_background.gif" alt="Aafnai Ads Logo" />
                             </a>
                         </Grid.Col>
 
