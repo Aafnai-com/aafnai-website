@@ -4,6 +4,11 @@ const clientsLogo = {
     link: "https://www.ncmtcollegenepal.edu.np/",
     category: "Educational Institution",
   },
+  UMLRajeshShakya: {
+    src: "/clientLogo/uml.webp",
+    link: "https://rajeshshakya.com/",
+    category: "Parliamentary Election Candidate",
+  },
   BlackBunnyNepal: {
     src: "/clientLogo/blackbunnynepal.jpg",
     link: "https://blackbunnynepal.com/",

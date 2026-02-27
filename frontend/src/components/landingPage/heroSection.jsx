@@ -38,7 +38,7 @@ export default function HeroSection() {
 
         <div className="hero-right">
           <div className="booking-card">
-            <h2>Order your first Ad.</h2>
+            <h2>Launch your first Ad.</h2>
             <p>
               Target your ideal customers with precision. Start your business growth.
             </p>
