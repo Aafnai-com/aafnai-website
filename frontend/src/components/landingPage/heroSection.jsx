@@ -60,7 +60,7 @@ export default function HeroSection() {
 
       </div>
       <div className="hero-bottom">
-        <h3 className="hero-bottom-text">Trusted by Leading Businesses</h3>
+        <h3 className="hero-bottom-text">Trusted by Leading Businesses & Organizations</h3>
         <Box className="marquee">
 
           <Box className="marquee-track">
