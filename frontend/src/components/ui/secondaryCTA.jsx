@@ -27,7 +27,7 @@ export default function SecondaryCTA() {
                             },
                         }}
                     >
-                        Explore aafnai
+                        Take Action
                     </Button>
                 </Link>
 
