@@ -34,7 +34,7 @@ export default function Footer() {
           <Link to="/" className="footer-link">
             {". "}Aafnai Ad Pvt. Ltd.
           </Link>
-          {" "} All rights reserved.
+          {" "} All rights reserved through Office of Company Registration, Nepal .
         </Text>
 
       </Container>

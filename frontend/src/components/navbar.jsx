@@ -7,6 +7,7 @@ import NavbarDropdown from "./ui/navbarDropdown";
 import { useDisclosure } from '@mantine/hooks';
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import WhatsAppContactButton from "./WhatsAppContactButton";
+import LoginButton from "./loginButton";
 
 
 export default function Navbar() {
@@ -53,7 +54,7 @@ export default function Navbar() {
                         </Grid.Col>
 
                         <Grid.Col span={4} className="navbar-actions-desktop" >
-
+                            <LoginButton />
                             <WhatsAppContactButton />
                         </Grid.Col>
                     </Grid>
