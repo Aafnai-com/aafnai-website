@@ -6,13 +6,15 @@ import SecondaryCTA from "../components/ui/secondaryCTA";
 import BlogsArticleSection from "../components/landingPage/blogsArticleSection";
 import { Newsletter } from "../components/landingPage/newsletter";
 import HowWeDoIt from "../components/landingPage/howWeDoIt";
+import { Meta } from "react-router-dom";
+import MetaSpendSection from "../components/ui/metaSpending";
 
 export default function LandingPage() {
   return (
     <>
       {/* I see they do what i am looking for */}
       {/* Clearly they do it for real companies */}
-
+      
       <HeroSection />
       {/* <HowWeDoIt /> */}
         {/* ah. Theire approach looks interesting -- How we do it part...  Video ? Timeline ?*/}
@@ -31,7 +33,9 @@ export default function LandingPage() {
         {/* depth deatail and related phrases */}
         {/* Final call to action */}
       {/* <Newsletter /> */}
+      
       <SecondaryCTA />
+      <MetaSpendSection />  
 
         {/* Need a cost calculator section here or somewhere for the cost of advertising when spen a dollar in fb for certain days. */}
 
